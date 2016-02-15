@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Live test</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+  a, h1 span {
+    display: inline-block;
+  }
+  button {
+    padding: 2em;
+    font-size: 2em;
+    touch-action: none;
+  }
+  </style>
+</head>
+<body>
+  <h1><span touch-action="none">Sticky</span> Elements Playground</h1>
+  <p>This should be a <a href="#" touch-action="none">sticky link</a>. And another <a href="http://twitter.com/iamvdo">one</a></p>
+  <button touch-action="none">Big Fat Touch Button</button>
+  <script src="https://code.jquery.com/pep/0.4.1/pep.js"></script>
+  <script src="../dist/stickyelements-animate.js"></script>
+  <script>
+  stickyElements('a, button, h1 span', {stickiness: 5, pointer: true});
+  </script>
+</body>
+</html>

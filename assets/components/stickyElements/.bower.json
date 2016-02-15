@@ -1,0 +1,14 @@
+{
+  "name": "stickyElements",
+  "homepage": "https://github.com/iamvdo/stickyElements",
+  "_release": "185064af6f",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "185064af6f8fe0c789115da57267fa689ed5a7d2"
+  },
+  "_source": "https://github.com/iamvdo/stickyElements.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/iamvdo/stickyElements.git",
+  "_direct": true
+}
