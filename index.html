@@ -6,7 +6,7 @@
         <title>Odirlei Borgert - Desenvolvedor Full-Stack</title>
         <meta name="description" content="Desenvolvedor Full-Stack.">
         <meta name="keywords" content=", Desenvolvedor Full-Stack, programador, angular, symfony2, diretor de arte, rota do automóvel, odonto control plus">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
         <link rel="stylesheet" href="assets/components/flexboxgrid/dist/flexboxgrid.min.css">
         <link rel="stylesheet" href="assets/css/normalize.css">
@@ -14,15 +14,16 @@
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700' rel='stylesheet' type='text/css'>
         
         <script src="assets/js/vendor/modernizr-2.7.1.min.js"></script>
+
     </head>
     <body>
-    
+
         <header class="topo">
             <div class="container-fluid">
                 <div class="row middle-xs">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-                        <img src="assets/images/odirlei.jpg" alt="Odirlei Borgert" class="img-rounded item">
-                        <h1 class="item">Odirlei Borgert</h1>
+                        <img src="assets/images/odirlei.jpg" alt="Odirlei Borgert" class="img-rounded item-photo">
+                        <h1 class="item-title">Odirlei Borgert</h1>
                         <div class="subtitle">Desenvolvedor Full-Stack</div>
                         <p>São mais de 10 anos de experiência como desenvolvedor web,<br> conheça alguns dos projetos no <a href="https://www.behance.net/odirleiborgert" target="_blank">Behance</a>.</p>
                     </div>
@@ -32,7 +33,7 @@
         
         <section class="content">
             <div class="container-fluid">
-                <div class="row center-xs">
+                <div class="row center-sm center-md center-lg">
                     <div class="col-sm-4 col-md-4 col-lg-4 text-center">
                         <i class="flaticon-idea fi-3x"></i>
                         <h4>Expertises</h4>
@@ -74,10 +75,17 @@
         <script src="assets/components/stickyElements/dist/stickyelements.js"></script>
         
         <script>
-            stickyElements('.item', {
+
+            stickyElements('.item-title', {
               stickiness: {x:0,y:5},
               duration: 450
             });
+
+            stickyElements('.item-photo', {
+              stickiness: 5,
+              duration: 450
+            });
+
         </script>
 
         <script>

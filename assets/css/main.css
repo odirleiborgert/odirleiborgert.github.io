@@ -49,7 +49,14 @@ body {
 }
 
 
-hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+hr {
+	display:block;
+	height:1px;
+	border:0;
+	border-top:1px solid #ccc;
+	margin:1em 0;
+	padding:0;
+}
 
 .text-center {
 	text-align: center;
@@ -174,7 +181,7 @@ hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padd
 
 
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
 
 	.topo .row {
 		min-height: 500px;
@@ -186,6 +193,11 @@ hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padd
 
 	.content {
 		text-align: center;
+	}
+
+	.content .text-center {
+		display: block;
+		clear: both;
 	}
 
 }
