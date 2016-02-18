@@ -102,22 +102,22 @@ hr {
 
 /* Conteudo */
 
-.content {
+.conteudo {
 	padding: 40px 0;
 	font-size: 12px;
 }
-.content h2 {
+.conteudo h2 {
 	margin: 0 0 10px 0;
 	font-size: 15px;
 }
-.content h2 a {
+.conteudo h2 a {
 	color: #666;
 }
-.content h4 {
+.conteudo h4 {
 	margin: 10px 0 0 0;
 	font-size: 15px;
 }
-.content [class^="flaticon-"], .content [class*=" flaticon-"] {
+.conteudo [class^="flaticon-"], .content [class*=" flaticon-"] {
 	border: 2px #999 solid;
 	padding: 20px;
 	-webkit-border-radius: 100px;
