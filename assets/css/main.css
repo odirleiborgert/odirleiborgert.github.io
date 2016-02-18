@@ -199,9 +199,8 @@ hr {
 	.conteudo [class^="col-"], .conteudo [class*=" col-"], .conteudo .text-center {
 		flex-basis: 100% !important;
 		max-width: 100% !important;
+		background: red;
 	}
-
-	/*.conteudo [class^="col-"], .content [class*=" col-"]*/
 
 }
 
