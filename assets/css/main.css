@@ -117,17 +117,6 @@ hr {
 	margin: 10px 0 0 0;
 	font-size: 15px;
 }
-.conteudo [class^="flaticon-"], .content [class*=" flaticon-"] {
-	border: 2px #999 solid;
-	padding: 20px;
-	-webkit-border-radius: 100px;
-	-moz-border-radius: 100px;
-	border-radius: 100px;
-	display: block;
-	width: 70px;
-	height: 70px;
-	margin: auto;
-}
 
 
 
@@ -164,6 +153,13 @@ hr {
 }
 .rodape .coffee-love .flaticon-coffee {
 	font-size: 16px;
+}
+
+
+
+.glyph{
+    width:100px !important;
+    height:100px !important;
 }
 
 
