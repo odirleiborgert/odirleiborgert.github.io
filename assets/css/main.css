@@ -196,7 +196,7 @@ hr {
 		text-align: center;
 	}
 
-	.conteudo [class^="col-"], .conteudo [class*=" col-"], .conteudo .text-center {
+	.conteudo [class^="col-"], .conteudo [class*="col-"] {
 		flex-basis: 100% !important;
 		max-width: 100% !important;
 	}
