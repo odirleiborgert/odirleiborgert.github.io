@@ -106,5 +106,45 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-15434133-2');ga('send','pageview');
         </script>
+
+    <script src="//cdn.pushnews.eu/push/ilabspush.min.js" async></script>
+<script type="text/javascript">
+    var _ilabsPushConfig = {
+        optin: {
+            activation: {
+                type: "auto"
+            },
+            "%desktopImage%": "https://ilabs-static.s3.amazonaws.com/push/icon128_pushnews.jpg",
+            "%desktopTxtTitle%": "Fique ligado!",
+            "%desktopTxtBody%": "Receba conteúdos exclusivos para você!",
+            "%desktopTxtButtonNo%": "Não, obrigado",
+            "%desktopTxtButtonYes%": "Eba, quero!",
+            "%mobileImage%": "https://ilabs-static.s3.amazonaws.com/push/icon128_pushnews.jpg",
+            "%mobileTxtTitle%": "Fique ligado!",
+            "%mobileTxtBody%": "Receba conteúdos exclusivos para você!",
+            "%mobileTxtButtonNo%": "Não, obrigado",
+            "%mobileTxtButtonYes%": "Eba, quero!"
+        },
+        popup: {
+            name: "odirleiborgert com br",
+            domain: "odirleiborgert-com-br.pushnews.eu",
+            appId: "a657aebc-f8f9-4332-979b-7e4ce9f71acb",
+            actionMessage: "quer te enviar notificações:",
+            notificationIcon: "https://ilabs-static.s3.amazonaws.com/push/icon128_pushnews.jpg",
+            notificationTitle: "Exemplo",
+            notificationMessage: "Esta é uma notificação exemplo",
+            caption: "(pode cancelar quando quiser)"
+        },
+        osp: {
+            status: true,
+            activation: {
+                type: "scroll"
+            }
+        }
+    };
+    var IlabsPush = IlabsPush || [];
+    IlabsPush.push(["initHttps", _ilabsPushConfig]);
+</script>
+    
     </body>
 </html>
