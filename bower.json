@@ -1,0 +1,23 @@
+{
+  "name": "odirleiborgert.github.io",
+  "homepage": "https://github.com/odirleiborgert/odirleiborgert.github.io",
+  "authors": [
+    "Odirlei Borgert <odirleiborgert@gmail.com>"
+  ],
+  "description": "Web",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "flexboxgrid": "~6.3.0",
+    "stickyElements": "https://github.com/iamvdo/stickyElements.git"
+  }
+}
