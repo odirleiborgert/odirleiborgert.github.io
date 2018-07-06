@@ -40,162 +40,84 @@
 	font-size: 50px;
 }
 
+html, body {
+	height: 100%;
+}
+
 
 body {
 	color: #999;
 	font-size: 1em;
 	line-height: 1.4;
 	font-family: arial;
-}
-
-
-hr {
-	display:block;
-	height:1px;
-	border:0;
-	border-top:1px solid #ccc;
-	margin:1em 0;
-	padding:0;
-}
-
-.text-center {
-	text-align: center;
-}
-
-.topo {
 	background:url(../images/background.jpg) no-repeat center center;
-	color:#fff;
-	font-family:'Source Sans Pro',sans-serif;
-	font-weight:200;
-}
-.topo .row {
-	min-height: 450px;
-}
-.topo .img-rounded {
-	-webkit-border-radius: 100px;
-	-moz-border-radius: 100px;
-	border-radius: 100px;
-	width: 120px;
-	margin: auto;
-	border: 2px #fff solid;
-}
-.topo h1 {
-	text-align:center;
-	color:#fff;
-	font-weight:700;
-	font-size:65px;
-	text-transform:uppercase;
-	margin:0;
-	line-height:100%
-}
-.topo .subtitle {
-	text-align:center;
-	margin:0;
-	font-size:26px;
-	line-height:100%;
-	padding: 15px 15% 0 15%;
-}
-.topo a {
-	color:#fff;
-}
-
-
-/* Conteudo */
-
-.conteudo {
-	padding: 40px 0;
-	font-size: 12px;
-}
-.conteudo h2 {
-	margin: 0 0 10px 0;
-	font-size: 15px;
-}
-.conteudo h2 a {
-	color: #666;
-}
-.conteudo h4 {
-	margin: 10px 0 0 0;
-	font-size: 15px;
-}
-
-
-
-
-/* Rodapé */
-.rodape {
-	font-size: 11px;
-	color: #b7b7b7;
+	background-size: cover;
+	background-attachment: fixed;
 	text-align: center;
-	padding: 20px 0;
 }
-.rodape .email {
-	font-size: 13px;
-	line-height: 20px;
+
+.content, .container-fluid, .row.middle-xs {
+	height: 100%;
 }
-.rodape .redes-sociais {
-	margin-bottom: 30px;
+
+
+/* Content */
+
+.content {
+	font-size: 12px;
+	color: #c3bdd0;
 }
-.rodape .redes-sociais a {
+.content .text-content {
+	margin: auto;
+	max-width: 650px;
+	font-size: 14px;
+}
+.content .text-content a {
+	color: #fff;
+}
+
+
+
+/* Redes soociais */
+.social {
+	padding: 30px 0;
+}
+.social a {
 	font-size: 35px;
 	color: #ccc;
   	text-decoration: none;
   	margin: 0 8px;
 }
-.rodape .redes-sociais a:hover {
+.social a:hover {
 	color: #999;
 }
-.rodape hr {
-	border-top: 1px dotted #ddd;
-	margin-bottom: 0;
-}
-.rodape .coffee-love {
-	padding: 20px 0 0 0;
-}
-.rodape .coffee-love .flaticon-coffee {
-	font-size: 16px;
-}
-
-
-
-.glyph{
-    width:100px !important;
-    height:100px !important;
-}
-
 
 
 
 @media screen and (max-width: 768px) {
-
-	.topo h1 {
-		font-size: 50px;
+	.content .item-title img {
+		max-width: 430px;
 	}
-
-
 }
-
-
 
 
 @media screen and (max-width: 480px) {
 
-	.topo .row {
-		min-height: 500px;
+	.content .item-title img {
+		width: 100%;
 	}
-
-	.topo h1 {
-		font-size: 30px;
+	.social a {
+		font-size: 26px;
+		margin: 0 6px;
 	}
-
-	.conteudo {
-		text-align: center;
+	.social .email {
+		padding-top: 10px;
+		display: block;
 	}
-
-	.conteudo [class^="col-"], .conteudo [class*="col-"] {
+	.content [class^="col-"], .content [class*="col-"] {
 		flex-basis: 100% !important;
 		max-width: 100% !important;
 	}
 
 }
-
 
