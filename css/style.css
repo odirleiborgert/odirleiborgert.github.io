@@ -98,6 +98,24 @@ body {
   z-index: 0;
 }
 
+.hero-name span {
+  display: inline-block;
+  background: linear-gradient(90deg,
+      rgb(255, 31, 133) 0%,
+      rgb(245, 200, 68) 33%,
+      #efefef 50%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-position 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-name span:hover {
+  background-position: 0% 0;
+}
+
 .hero-name {
   font-family: 'Open Sans', sans-serif;
   font-size: clamp(3rem, 9vw, 10rem);
