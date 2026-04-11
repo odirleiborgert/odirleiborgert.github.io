@@ -12,7 +12,7 @@
   --dim: #888;
   --faint: rgba(255, 255, 255, 0.06);
   --pad: clamp(24px, 5vw, 64px);
-  --accent: #ff6500;
+  --accent: #c8601a;
 }
 
 html {
@@ -162,6 +162,48 @@ body {
   border-color: var(--accent);
 }
 
+/* ── Technologies ────────────────────────────────────── */
+.tech-section {
+  padding-top: 0;
+}
+
+.tech-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #3a3a3a;
+  margin-bottom: 20px;
+}
+
+.tech-body {
+  font-size: clamp(0.9rem, 1.4vw, 1.1rem);
+  font-weight: 300;
+  line-height: 1.65;
+  color: #555;
+  max-width: 600px;
+  margin-bottom: 36px;
+}
+
+.tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(20px, 3vw, 32px);
+  align-items: center;
+}
+
+.tech-icon {
+  opacity: 0.18;
+  transition: opacity 0.25s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: block;
+  width: 28px;
+  height: 28px;
+}
+
+.tech-icon:hover {
+  opacity: 0.75;
+  transform: scale(1.15);
+}
+
 /* ── Links list ──────────────────────────────────────── */
 .links-section {
   padding: 0 var(--pad) clamp(72px, 10vw, 140px);
@@ -194,7 +236,7 @@ body {
   border: 1px solid var(--faint);
   gap: clamp(20px, 2.5vw, 32px);
   transition: border-color 0.25s ease,
-              transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .link-item:hover {
@@ -244,8 +286,8 @@ body {
 
 .links-group:hover .link-item {
   transition: border-color 0.25s ease,
-              transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-              opacity 0.2s ease;
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.2s ease;
 }
 
 /* ── Footer ──────────────────────────────────────────── */
