@@ -102,13 +102,7 @@ body {
   z-index: 1;
 }
 
-.hero-role {
-  font-size: clamp(0.7rem, 1.1vw, 0.82rem);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #444;
-}
-
+.hero-role,
 .hero-years {
   font-family: 'Bebas Neue', sans-serif;
   font-size: clamp(0.7rem, 1.1vw, 0.82rem);
