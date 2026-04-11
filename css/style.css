@@ -26,12 +26,17 @@ body {
   font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+
+  background: linear-gradient(112.33deg, rgb(255, 31, 133) -0.51%, rgb(245, 200, 68) 90.69%, rgb(0, 140, 255) 132.64%) text;
+  padding: 5px;
 }
 
 /* ── Page load animation ─────────────────────────────── */
 .page-wrap {
   opacity: 0;
   animation: pageIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+  background: var(--bg);
+  /* border-radius: 20px; */
 }
 
 @keyframes pageIn {
