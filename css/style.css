@@ -74,20 +74,10 @@ body {
   justify-content: flex-end;
   padding: 0 var(--pad) clamp(40px, 6vh, 72px);
   position: relative;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
-  background-size: 80px 80px;
-  pointer-events: none;
-  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
-  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
-  z-index: 0;
+  background-image: url('../img/bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .grain-overlay {
@@ -144,7 +134,8 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: clamp(0.7rem, 1.1vw, 0.82rem);
   letter-spacing: 0.08em;
-  color: #333;
+  color: #FFF;
+  /* opacity: 0.26; */
 }
 
 /* ── Section wrapper ─────────────────────────────────── */
