@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa de Alvenaria com Piscina | Jaraguá do Sul - Odirlei Borgert</title>
+    
+    <!-- Fonte sugerida para a estética Japandi -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Paleta Japandi Minimalist */
+            --bg-base: #FAF9F6;       /* Creme quente */
+            --bg-alt: #E8E6E1;        /* Taupe suave */
+            --primary-text: #111111;  /* Preto profundo */
+            --accent-text: #698F78;   /* Verde Oliva suave */
+            --accent-highlight: #d4af37; /* Dourado suave para acentos */
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-base);
+            color: var(--primary-text);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px; /* Cantos levemente arredondados */
+        }
+
+        .container {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Hero Section Assimétrico */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 60vh;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 0; /* Remove raio para visual mais arquitetônico */
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%); /* Borda orgânica */
+        }
+
+        .hero-content {
+            padding: 0 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .hero-title-group h1 {
+            font-size: 2.2rem;
+            color: var(--primary-text);
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+
+        .hero-title-group .subtitle {
+            font-size: 1.05rem;
+            color: var(--accent-text);
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        /* Preço Integrado */
+        .price-display {
+            margin: 20px 0;
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+        }
+
+        .price-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-text);
+        }
+
+        .price-value {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--primary-text);
+        }
+
+        /* Destaques: Cinto de Ícones */
+        .highlights-band {
+            background-color: var(--bg-alt);
+            padding: 25px 10px;
+            margin: 40px -20px; /* Extende fora do contêiner */
+            display: flex;
+            overflow-x: auto; /* Permite rolagem no celular */
+            gap: 30px;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .highlight-item {
+            flex: 0 0 auto;
+            text-align: center;
+            width: 120px;
+        }
+
+        /* Ícones de linha minimalista (substitua por SVGs ou FontAwesome se preferir) */
+        .highlight-icon {
+            font-size: 2rem;
+            color: var(--accent-text);
+            margin-bottom: 10px;
+        }
+
+        .highlight-number {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--primary-text);
+            display: block;
+        }
+
+        .highlight-desc {
+            font-size: 0.85rem;
+            color: var(--accent-text);
+            font-weight: 600;
+        }
+
+        /* Seção de Texto: Layout em Cascata */
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary-text);
+            margin: 50px 0 25px 0;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 2px;
+            background: var(--accent-highlight);
+            margin-top: 8px;
+        }
+
+        .description-text p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            color: #333;
+            max-width: 700px; /* Limita largura para leitura */
+        }
+
+        .features-list {
+            list-style: none;
+            margin: 30px 0;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .features-list li {
+            padding: 10px 0;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* Ícones de acento em vez de checkmarks */
+        .features-list li::before {
+            content: "✦"; /* Símbolo mais sutil */
+            color: var(--accent-highlight);
+            font-size: 0.9rem;
+        }
+
+        /* Galeria Integrada (Masonry) */
+        .gallery-integrated {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .gallery-integrated img {
+            object-fit: cover;
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+            transition: transform 0.3s ease;
+        }
+        
+        /* Efeito de hover sutil */
+        .gallery-integrated img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Variando tamanhos e formas */
+        .gallery-integrated img:nth-child(odd) { grid-row: span 2; height: 350px; }
+        .gallery-integrated img:nth-child(even) { height: 180px; }
+        .gallery-integrated img:nth-child(3) { grid-column: span 2; height: 250px; border-radius: 50% 50% 8px 8px / 12px 12px 8px 8px; } /* Forma orgânica */
+
+        /* Botão WhatsApp Stylizado */
+        .btn-whatsapp-minimal {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background-color: var(--white);
+            color: var(--primary-text);
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 18px 30px;
+            border: 2px solid var(--accent-text);
+            border-radius: 4px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-whatsapp-minimal:hover {
+            background-color: var(--accent-text);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        /* CTA Fixo Mobile Simplificado */
+        .sticky-footer-minimal {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px 20px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+            z-index: 999;
+        }
+
+        .footer-spacer-minimal {
+            height: 90px;
+        }
+
+        /* Responsividade Desktop */
+        @media (min-width: 768px) {
+            .hero {
+                flex-direction: row;
+                align-items: center;
+                gap: 50px;
+            }
+
+            .hero-image {
+                width: 65%;
+                height: 70vh;
+                clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%); /* Borda orgânica reversa */
+            }
+
+            .hero-content {
+                width: 35%;
+            }
+
+            .hero-title-group h1 {
+                font-size: 2.8rem;
+            }
+
+            .price-value {
+                font-size: 3.5rem;
+            }
+
+            .highlights-band {
+                margin: 60px 0;
+                border-radius: 8px;
+                padding: 30px;
+                justify-content: space-around;
+            }
+
+            .features-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery-integrated {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+            }
+
+            .gallery-integrated img:nth-child(odd) { height: 300px; grid-row: span 1; }
+            .gallery-integrated img:nth-child(even) { height: 300px; }
+            .gallery-integrated img:nth-child(2) { grid-row: span 2; height: 620px; }
+            .gallery-integrated img:nth-child(3) { grid-column: span 1; border-radius: 8px; height: 300px; }
+
+            .sticky-footer-minimal {
+                display: none;
+            }
+
+            .footer-spacer-minimal {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <img src="/casa/1.jpg" alt="Fachada da casa de alvenaria em Jaraguá do Sul" class="hero-image">
+    
+    <div class="container hero">
+        <div class="hero-content">
+            <div class="hero-title-group">
+                <h1>Casa de Alvenaria com Piscina em Jaraguá do Sul</h1>
+                <p class="subtitle">Espaço, privacidade e o conforto que sua família merece.</p>
+            </div>
+
+            <div class="price-display">
+                <span class="price-label">Investimento</span>
+                <span class="price-value">R$ 985.000</span>
+            </div>
+
+            <p style="margin-bottom: 30px; font-size: 1rem; color: #555;">
+                Residência sólida, com ambientes amplos, climatizados e uma área de lazer perfeita para criar memórias inesquecíveis.
+            </p>
+
+            <a href="https://wa.me/5547991839602?text=Olá!%20Tenho%20interesse%20na%20Casa%20com%20Piscina%20em%20Jaraguá%20do%20Sul%20(R$%20985%20mil)." class="btn-whatsapp-minimal">
+                Agendar uma Visita no WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <!-- Destaques: Cinto de Ícones -->
+    <div class="highlights-band">
+        <div class="highlight-item">
+            <div class="highlight-icon">🛏️</div> <!-- Substitua por SVG se preferir -->
+            <span class="highlight-number">4</span>
+            <span class="highlight-desc">Dormitórios (1 Suite)</span>
+        </div>
+        <div class="highlight-item">
+            <div class="highlight-icon">🚗</div>
+            <span class="highlight-number">2</span>
+            <span class="highlight-desc">Vagas Cobertas</span>
+        </div>
+        <div class="highlight-item">
+            <div class="highlight-icon">🏊</div>
+            <span class="highlight-number">Piscina</span>
+            <span class="highlight-desc">Privativa</span>
+        </div>
+        <div class="highlight-item">
+            <div class="highlight-icon">📐</div>
+            <span class="highlight-number">120 m²</span>
+            <span class="highlight-desc">Área Total</span>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Descrição Persuasiva -->
+        <section class="description-text">
+            <h2 class="section-title">Sobre o Imóvel</h2>
+            <p>
+                Se você busca uma casa espaçosa, bem construída e pronta para morar em Jaraguá do Sul, este imóvel reúne a estrutura ideal para o bem-estar da sua família.
+            </p>
+            <p>
+                A residência conta com <strong>ambientes integrados e iluminados</strong>, destacando-se pelas elegantes esquadrias de madeira nobre com arcos decorativos, salas de estar e jantar muito amplas (com lustre e ventilador de teto já instalados), além de pontos de ar-condicionado em diversos cômodos para garantir conforto em todas as estações.
+            </p>
+            <p>
+                A cozinha conta com móveis sob medida e bancada em granito, conectada a uma área de serviço prática e reservada. Na área externa, o destaque fica para a <strong>piscina privativa</strong> e o quintal privativo, perfeitos para momentos de descanso e recepção de amigos.
+            </p>
+
+            <h2 class="section-title">Diferenciais do Imóvel</h2>
+            <ul class="features-list">
+                <li>Estrutura sólida em alvenaria com acabamentos de qualidade</li>
+                <li>Piscina privativa ideal para os dias quentes</li>
+                <li>Cozinha equipada com móveis planejados e granito</li>
+                <li>Garagem coberta para múltiplos veículos com piso cerâmico</li>
+                <li>Salas amplas para 2 ou mais ambientes com boa ventilação</li>
+                <li>Janelas em madeira nobre com acabamento em arco</li>
+                <li>Muros altos com detalhes em pedra decorativa e portão elétrico</li>
+                <li>Cômodos climatizados com ar-condicionado instalado</li>
+            </ul>
+        </section>
+
+        <!-- Galeria de Fotos -->
+        <section>
+            <h2 class="section-title">Galeria de Fotos</h2>
+            <div class="gallery-integrated">
+                <img src="/casa/1.jpg" alt="Fachada e Garagem Coberta">
+                <img src="/casa/2.jpg" alt="Lateral da Casa e Jardim">
+                <img src="/casa/6.jpg" alt="Sala Principal com Lustre">
+                <img src="/casa/7.jpg" alt="Amplo Living e Sala de Jantar">
+                <img src="/casa/4.jpg" alt="Cozinha com Móveis Sob Medida">
+                <img src="/casa/5.jpg" alt="Área de Serviço / Lavanderia">
+                <img src="/casa/8.jpg" alt="Dormitório Climatizado 1">
+                <img src="/casa/9.jpg" alt="Dormitório Climatizado 2">
+                <img src="/casa/10.jpg" alt="Dormitório / Escritório">
+            </div>
+        </section>
+    </div>
+
+    <!-- Espaçamento final para o botão fixo -->
+    <div class="footer-spacer-minimal"></div>
+
+    <!-- CTA Fixo para Dispositivos Móveis -->
+    <div class="sticky-footer-minimal">
+        <a href="https://wa.me/5547991839602?text=Olá!%20Vi%20a%20casa%20no%20site%20e%20quero%20mais%20informações." class="btn-whatsapp-minimal">
+            Falar Direto no WhatsApp
+        </a>
+    </div>
+
+</body>
+</html>

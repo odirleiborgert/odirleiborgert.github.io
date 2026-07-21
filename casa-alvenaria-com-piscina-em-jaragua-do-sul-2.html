@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa Premium com Piscina | Jaraguá do Sul - Odirlei Borgert</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #0f2b48;  /* Azul elegante */
+            --accent-color: #25D366;   /* Verde WhatsApp */
+            --highlight-color: #d4af37;/* Dourado/Bronze */
+            --bg-light: #f8fafc;
+            --text-main: #2c3e50;
+            --text-muted: #64748b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px; /* Cantos um pouco mais suaves */
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* --- HERO PREMIUM --- */
+        .hero {
+            position: relative;
+            background-image: linear-gradient(rgba(15, 43, 72, 0.7), rgba(15, 43, 72, 0.95)), url('/casa/1.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            padding: 100px 20px;
+            text-align: center;
+            border-bottom: 4px solid var(--highlight-color);
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .hero .subtitle {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--highlight-color);
+            margin-bottom: 30px;
+        }
+
+        .hero-info-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .hero-info-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Botão Hero mais clean */
+        .hero .btn-whatsapp {
+            display: inline-flex;
+            background-color: transparent;
+            border: 2px solid var(--accent-color);
+            color: var(--accent-color);
+            font-weight: 700;
+            padding: 14px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .hero .btn-whatsapp:hover {
+            background-color: var(--accent-color);
+            color: #ffffff;
+        }
+
+        /* --- GRADE DE DESTAQUES (Ícones e Minimalismo) --- */
+        .highlights-section {
+            background-color: #ffffff;
+            padding: 50px 0;
+            margin-top: -30px; /* Sobrepõe levemente o hero */
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            z-index: 2;
+            position: relative;
+        }
+
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .highlight-item {
+            padding: 10px;
+        }
+
+        .highlight-icon {
+            font-size: 2rem;
+            color: var(--highlight-color);
+            margin-bottom: 10px;
+        }
+
+        .highlight-value {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: block;
+        }
+
+        .highlight-label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        /* --- DESCRIÇÃO NARRATIVA INTEGRADA --- */
+        .section-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 50px 0 20px 0;
+            text-align: center;
+        }
+
+        .description-text p {
+            margin-bottom: 20px;
+            font-size: 1rem;
+            color: var(--text-main);
+            text-align: justify;
+        }
+
+        .description-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .features-list {
+            list-style: none;
+            margin: 20px 0;
+            columns: 2; /* Divide a lista em duas colunas no desktop */
+        }
+
+        .features-list li {
+            padding: 10px 0;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .features-list li::before {
+            content: "✦";
+            color: var(--highlight-color);
+            font-weight: bold;
+        }
+
+        /* --- GALERIA MOSAICO (IMERSIVA) --- */
+        .gallery-title {
+            text-align: center;
+            font-size: 1.6rem;
+            margin-top: 50px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .gallery-grid img {
+            height: 250px;
+            object-fit: cover;
+            width: 100%;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.02);
+        }
+
+        /* --- FIXED FOOTER (AÇÕES RÁPIDAS) --- */
+        .fixed-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #ffffff;
+            padding: 15px 20px;
+            box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .fixed-price-group .price {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--primary-color);
+        }
+
+        .fixed-price-group .agent {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .fixed-footer .btn-whatsapp {
+            background-color: var(--accent-color);
+            color: #ffffff;
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        /* Responsividade Desktop */
+        @media (min-width: 768px) {
+            .hero {
+                padding: 150px 20px;
+            }
+            .hero h1 { font-size: 3rem; }
+            .hero-info-grid { font-size: 1.4rem; }
+            .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+            .gallery-grid img { height: 300px; }
+            .section-title { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO PREMIUM (Visão Principal) -->
+    <section class="hero">
+        <div class="container">
+            <h1>CASA PREMIUM COM PISCINA</h1>
+            <p class="subtitle">A Sophistication of Alvenaria em Jaraguá do Sul</p>
+            
+            <div class="hero-info-grid">
+                <div class="hero-info-item">4 <span class="highlight-label">Dormitórios (1 Suite)</span></div>
+                <div class="hero-info-item">120 <span class="highlight-label">m² Total</span></div>
+            </div>
+
+            <a href="https://wa.me/5547991839602?text=Olá!%20Tenho%20interesse%20na%20Casa%20com%20Piscina%20Premium%20em%20Jaraguá%20do%20Sul." class="btn-whatsapp">Agendar uma Visita Especial</a>
+        </div>
+    </section>
+
+    <!-- DESTAQUES (Grade Minimalista e Ícones) -->
+    <div class="container highlights-section">
+        <div class="highlights-grid">
+            <div class="highlight-item">
+                <div class="highlight-icon">🛏️</div> <!-- Use ícones reais ou SVGs se preferir -->
+                <span class="highlight-value">4</span>
+                <span class="highlight-label">Dormitórios (1 Suite)</span>
+            </div>
+            <div class="highlight-item">
+                <div class="highlight-icon">🚗</div>
+                <span class="highlight-value">2</span>
+                <span class="highlight-label">Vagas Cobertas</span>
+            </div>
+            <div class="highlight-item">
+                <div class="highlight-icon">🏊‍♀️</div>
+                <span class="highlight-value">Privativa</span>
+                <span class="highlight-label">Lazer Exclusivo</span>
+            </div>
+            <div class="highlight-item">
+                <div class="highlight-icon">📏</div>
+                <span class="highlight-value">120 m²</span>
+                <span class="highlight-label">Área Total</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- DESCRIÇÃO NARRATIVA INTEGRADA -->
+        <h2 class="section-title">A Arte de Viver Bem em Jaraguá</h2>
+        <div class="description-text">
+            <div class="description-split">
+                <p>
+                    Se você busca uma casa espaçosa, bem construída e pronta para morar em Jaraguá do Sul, este imóvel reúne a estrutura ideal para o bem-estar da sua família. A residência conta com <strong>ambientes integrados e iluminados</strong>, destacando-se pelas elegantes esquadrias de madeira nobre com arcos decorativos.
+                </p>
+                <img src="/casa/2.jpg" alt="Lateral da Casa e Jardim">
+            </div>
+            <p style="margin-top: 20px;">
+                Salas de estar e jantar muito amplas (com lustre e ventilador de teto já instalados), além de pontos de ar-condicionado em diversos cômodos para garantir conforto em todas as estações. A cozinha conta com móveis sob medida e bancada em granito, conectada a uma área de serviço prática e reservada. Na área externa, o destaque fica para a <strong>piscina privativa</strong>, perfeita para momentos de lazer.
+            </p>
+        </div>
+
+        <h2 class="section-title">A Experiência de Alto Padrão</h2>
+        <ul class="features-list">
+            <li>Piscina Privativa e Área de Lazer Exclusiva</li>
+            <li>Estrutura Sólida em Alvenaria Clássica</li>
+            <li>Cozinha Planejada com Granito Premium</li>
+            <li>Garagem Coberta para Múltiplos Veículos</li>
+            <li>Cômodos Climatizados (Ar Instalado)</li>
+            <li>Salas Amplas para Múltiplos Ambientes</li>
+            <li>Janelas em Madeira Nobre com Acabamento em Arco</li>
+            <li>Muros Altos com Pedra Decorativa e Portão Elétrico</li>
+        </ul>
+
+        <!-- GALERIA MOSAICO (IMERSIVA) -->
+        <h2 class="section-title gallery-title">Narrativa Visual da Casa</h2>
+        <div class="gallery-grid">
+            <img src="/casa/1.jpg" alt="Fachada e Garagem Coberta">
+            <img src="/casa/2.jpg" alt="Lateral da Casa e Jardim">
+            <img src="/casa/6.jpg" alt="Sala Principal com Lustre">
+            <img src="/casa/7.jpg" alt="Amplo Living e Sala de Jantar">
+            <img src="/casa/4.jpg" alt="Cozinha com Móveis Sob Medida">
+            <img src="/casa/5.jpg" alt="Área de Serviço / Lavanderia">
+            <img src="/casa/8.jpg" alt="Dormitório Climatizado 1">
+            <img src="/casa/9.jpg" alt="Dormitório Climatizado 2">
+            <img src="/casa/10.jpg" alt="Dormitório / Escritório">
+        </div>
+    </div>
+
+    <div style="height: 100px;"></div> <!-- Espaço para o footer -->
+
+    <!-- FOOTER FIXO (AÇÕES RÁPIDAS) -->
+    <div class="fixed-footer">
+        <div class="fixed-price-group">
+            <div class="price">R$ 985.000</div>
+            <div class="agent">Agente Exclusivo: Odirlei Borgert</div>
+        </div>
+        <a href="https://wa.me/5547991839602?text=Olá!%20Vi%20a%20casa%20premium%20no%20site%20e%20quero%20agendar%20visita." class="btn-whatsapp">Saiba Mais</a>
+    </div>
+
+</body>
+</html>
